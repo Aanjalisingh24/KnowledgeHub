@@ -36,7 +36,7 @@ const AdminKnowledge = () => {
             const token = localStorage.getItem("token");
 
             await axios.delete(
-                `http://localhost:5000/api/admin/knowledge/${knowledgeId}`,
+                `${API_URL}/api/admin/knowledge/${knowledgeId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ const AdminKnowledge = () => {
             const token = localStorage.getItem("token");
 
             const response = await axios.get(
-                "http://localhost:5000/api/knowledge",
+                `${API_URL}/api/knowledge`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

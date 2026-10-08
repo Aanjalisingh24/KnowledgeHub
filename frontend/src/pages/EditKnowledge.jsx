@@ -28,7 +28,7 @@ const EditKnowledge = () => {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          `http://localhost:5000/api/knowledge/${id}`,
+          `${API_URL}/api/knowledge/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -77,7 +77,7 @@ const EditKnowledge = () => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/knowledge/${id}`,
+        `${API_URL}/api/knowledge/${id}`,
         {
           title: formData.title,
           description: formData.description,

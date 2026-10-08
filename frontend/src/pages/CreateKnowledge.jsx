@@ -36,7 +36,7 @@ const CreateKnowledge = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/knowledge",
+        `${API_URL}/api/knowledge`,
         {
           title: formData.title,
           description: formData.description,

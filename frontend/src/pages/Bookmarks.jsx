@@ -16,7 +16,7 @@ const Bookmarks = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/bookmarks",
+        `${API_URL}/api/bookmarks`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ const Bookmarks = () => {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:5000/api/bookmarks/${knowledgeId}`,
+        `${API_URL}/api/bookmarks/${knowledgeId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -151,7 +151,7 @@ const KnowledgeDetail = () => {
 
       if (isBookmarked) {
         await axios.delete(
-          `http://localhost:5000/api/bookmarks/${id}`,
+          `${API_URL}/api/bookmarks/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -162,7 +162,7 @@ const KnowledgeDetail = () => {
         setIsBookmarked(false);
       } else {
         await axios.post(
-          `http://localhost:5000/api/bookmarks/${id}`,
+          `${API_URL}/api/bookmarks/${id}`,
           {},
           {
             headers: {
@@ -188,7 +188,7 @@ const KnowledgeDetail = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        `http://localhost:5000/api/feedback/${id}`,
+        `${API_URL}/api/feedback/${id}`,
         {
           helpful,
         },
@@ -217,7 +217,7 @@ const KnowledgeDetail = () => {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:5000/api/knowledge/${id}`,
+        `${API_URL}/api/knowledge/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

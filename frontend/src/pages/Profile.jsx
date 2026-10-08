@@ -26,7 +26,7 @@ const Profile = () => {
                 const token = localStorage.getItem("token");
 
                 const response = await axios.get(
-                    "http://localhost:5000/api/auth/profile",
+                    `${API_URL}/api/auth/profile`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ const Profile = () => {
                 setName(response.data.user.name);
 
                 const creditResponse = await axios.get(
-                    `http://localhost:5000/api/credits/profile/${response.data.user._id}`,
+                    `${API_URL}/api/credits/profile/${response.data.user._id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ const Profile = () => {
                 setCreditCount(creditResponse.data.creditCount);
 
                 const creditHistoryResponse = await axios.get(
-                    `http://localhost:5000/api/credits/profile/${response.data.user._id}/knowledge`,
+                    `${API_URL}/api/credits/profile/${response.data.user._id}/knowledge`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ const Profile = () => {
             const token = localStorage.getItem("token");
 
             const response = await axios.put(
-                "http://localhost:5000/api/auth/profile",
+                `${API_URL}/api/auth/profile`,
                 {
                     name: name.trim(),
                 },
@@ -142,7 +142,7 @@ const Profile = () => {
             const token = localStorage.getItem("token");
 
             await axios.put(
-                "http://localhost:5000/api/auth/change-password",
+                `${API_URL}/api/auth/change-passwor`,
                 {
                     currentPassword,
                     newPassword,

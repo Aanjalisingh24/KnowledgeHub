@@ -17,7 +17,7 @@ const KnowledgeLibrary = () => {
       const currentType = searchParams.get("type") || "";
 
       const response = await axios.get(
-        "http://localhost:5000/api/knowledge",
+        `${API_URL}/api/knowledge`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
