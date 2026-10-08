@@ -27,7 +27,7 @@ const KnowledgeDetail = () => {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          `http://localhost:5000/api/credits/${id}/status`,
+          `${API_URL}/api/credits/${id}/status`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ const KnowledgeDetail = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        `http://localhost:5000/api/credits/${id}`,
+        `${API_URL}/api/credits/${id}`,
         {},
         {
           headers: {
@@ -78,7 +78,7 @@ const KnowledgeDetail = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        `http://localhost:5000/api/knowledge/${id}`,
+        `${API_URL}/api/knowledge/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -101,7 +101,7 @@ const KnowledgeDetail = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        `http://localhost:5000/api/bookmarks/${id}/status`,
+        `${API_URL}/api/bookmarks/${id}/status`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -120,7 +120,7 @@ const KnowledgeDetail = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        `http://localhost:5000/api/feedback/${id}`,
+        `${API_URL}/api/feedback/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
