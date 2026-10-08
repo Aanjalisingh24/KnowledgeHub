@@ -5,6 +5,7 @@ import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 import DOMPurify from "dompurify";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const KnowledgeDetail = () => {
   const { id } = useParams();

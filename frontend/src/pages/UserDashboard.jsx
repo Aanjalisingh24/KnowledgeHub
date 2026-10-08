@@ -3,6 +3,7 @@ import Topbar from "../components/Topbar";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const UserDashboard = () => {
   const user = JSON.parse(localStorage.getItem("user"));

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Bookmarks = () => {
   const [bookmarks, setBookmarks] = useState([]);

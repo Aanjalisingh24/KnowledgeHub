@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const ManageUsers = () => {
     const [users, setUsers] = useState([]);

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const KnowledgeLibrary = () => {
   const [knowledge, setKnowledge] = useState([]);
