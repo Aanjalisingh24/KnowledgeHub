@@ -2,7 +2,7 @@ const express = require("express");
 
 const Knowledge = require("../models/Knowledge");
 const KnowledgeCredit = require("../models/KnowledgeCredit");
-const authMiddleware = require("../middleware/authMiddleware");
+const authMiddleware = require("../middleware/authmiddleware");
 
 const router = express.Router();
 
