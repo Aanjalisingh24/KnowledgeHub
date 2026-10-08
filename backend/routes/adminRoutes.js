@@ -2,7 +2,7 @@ const express = require("express");
 const User = require("../models/user");
 const Knowledge = require("../models/Knowledge");
 const KnowledgeFeedback = require("../models/KnowledgeFeedback");
-const authMiddleware = require("../middleware/authMiddleware");
+const authMiddleware = require("../middleware/authmiddleware");
 const adminMiddleware = require("../middleware/adminMiddleware");
 const Bookmark = require("../models/Bookmark");
 
